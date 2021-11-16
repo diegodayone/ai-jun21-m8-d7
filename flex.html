@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        #parent {
+            height: 120vh;
+            background-color: lightcoral;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background: lightcyan;
+            border: 2px solid blue;
+            /* flex-shrink: 0; */
+            position:relative;
+        }
+
+        img {
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+           
+            /* display: none; */
+        }
+
+        .box.big {
+            width: 200px;
+            height:200px;
+        }
+
+        .shrinky {
+            flex-shrink: 5;
+        }
+
+        .growy{
+            flex-grow: 1;
+        }
+
+        .misplaced {
+            align-self:flex-end;
+            background: lightcyan;
+        }
+
+        .nav {
+            display:flex;
+            justify-content: space-evenly;
+            background: black;
+            color:white;
+            padding:20px;
+            margin:0px;
+            position:fixed;
+            width: 100%;
+        }
+
+        .close-button{
+            background: white;
+            border:2px solid red;
+            color: red;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-weight: bold;
+            text-align: center;
+            position:absolute;
+            top:5px;
+            right:5px;
+        }
+
+        @media(max-width: 500px){
+            #parent {
+                background-color:red;
+            }
+            .box {
+                width: 100px;
+                height: 100px;
+            }
+
+            img {
+                display:none;
+                /* width: 100px;
+                height: 100px; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+            <li>Home</li>
+            <li>Homework</li>
+            <li>Lectures</li>
+            <li>Log Out</li>
+    </div>
+
+    <div id="parent">
+        <div class="box" ></div>
+        <div class="box">
+            <img src="https://cdns-images.dzcdn.net/images/cover/f0282817b697279e56df13909962a54a/500x500.jpg" />
+            <div class="close-button">X</div>
+        </div>
+        <div class="box misplaced" ></div>
+        <div class="box" ></div>
+
+        <!-- <div class="box">
+            <ul>
+                <li>
+                    Tracks
+                </li>
+                <li>
+                    Artists
+                </li>
+                <li>
+                    Playlists
+                </li>
+                <li>
+                    Favourites
+                </li>
+            </ul>
+        </div>
+        <div class="box growy">
+            some content
+        </div> -->
+    </div>
+</body>
+
+</html>

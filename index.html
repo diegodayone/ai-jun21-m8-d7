@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- configuration of the page
+        METADATA for sharing on socials
+        METADATA for google when it crawls the page
+        TITLE of the page
+        import of css
+        import of fonts...
+        -->
+
+    <style>
+        li {
+            background: red;
+            color: yellow;
+        }
+
+        #uniqueListItem {
+            background: black;
+            color: white;
+        }
+
+        .boldText {
+            font-weight: bold;
+        }
+
+        .striveColor {
+            color: #00ff84;
+        }
+
+        div p {
+            color: blue;
+        }
+
+        div > p {
+            color: red;
+        }
+
+        /* 
+        (#ids, #classes, #tags)
+        #unique .card p { (1,1,1)
+
+        }
+
+        div > p { (0,0,2)
+
+        }
+
+        div p { (0,0,2) => will elect the last one it reads on the page
+
+        }
+        */
+
+        #whatever {
+            color: purple;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to CSS</h1>
+
+    <ul>
+        <li id="whatever" class="striveColor">Element one</li>
+        <li class="boldText striveColor">Element two</li>
+        <li id="uniqueListItem">Element three</li>
+        <li>Element four</li>
+    </ul>
+
+    <div>
+        <div>
+            <h2>Title</h2>
+            <a href="https://google.com">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quidem perspiciatis doloribus facere nihil
+                qui modi, totam repellat dolorum repellendus assumenda. Nam ullam dicta dolores ab repellendus
+                distinctio quos fuga.</p>
+            </a>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus aliquid veritatis culpa quas quis. Quo minima similique amet tenetur libero quos, maiores impedit voluptatem praesentium alias sint molestias, accusamus non.</p>
+        </div>
+    </div>
+
+    <p class="boldText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eius, nam libero natus beatae enim.
+        Dolore cumque, ex sit impedit consequatur ea aperiam accusantium. Aut maiores atque adipisci soluta voluptatem.
+    </p>
+
+
+    <p style="display:none;">
+        !!!! 🚀🚀🚀🚀🚀🚀🚀🚀Lorem ipsum dolor, aaaaa aa a a a a a a a a a a 🚀🚀🚀🚀🚀🚀🚀🚀
+    </p>
+    <p style="display:inline">
+        Lorem ipsum dolor, Lorem ipsum dolor, aaaaa aa a a a a a a a a a a Lorem ipsum dolor, aaaaa aa a a a a a a a a a a Lorem ipsum dolor, aaaaa aa a a a a a a a a a a Lorem ipsum dolor, aaaaa aa a a a a a a a a a a Lorem ipsum dolor, aaaaa aa a a a a a a a a a a
+    </p>
+</body>
+
+</html>
